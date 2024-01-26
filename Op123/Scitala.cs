@@ -38,6 +38,8 @@ namespace Op123
             int rows = (int)Math.Ceiling((double)plaintext.Length / _columns);
             _messageLength = plaintext.Length;
 
+            char[,] _matrix = new char[rows, _columns]; // Увеличиваем размеры матрицы
+
             int index = 0;
             // Заполняем матрицу символами из исходного текста
             for (int i = 0; i < rows; i++)

@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Regisrt));
             panel1 = new Panel();
+            button1 = new Button();
             textRepeatPass = new TextBox();
             label4 = new Label();
             buttonReg = new Button();
@@ -49,6 +50,7 @@
             // panel1
             // 
             panel1.BackColor = SystemColors.ActiveCaptionText;
+            panel1.Controls.Add(button1);
             panel1.Controls.Add(textRepeatPass);
             panel1.Controls.Add(label4);
             panel1.Controls.Add(buttonReg);
@@ -64,6 +66,16 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(679, 561);
             panel1.TabIndex = 1;
+            // 
+            // button1
+            // 
+            button1.Location = new Point(34, 429);
+            button1.Name = "button1";
+            button1.Size = new Size(75, 23);
+            button1.TabIndex = 11;
+            button1.Text = "Отмена";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // textRepeatPass
             // 
@@ -86,7 +98,7 @@
             // 
             // buttonReg
             // 
-            buttonReg.Location = new Point(420, 417);
+            buttonReg.Location = new Point(415, 417);
             buttonReg.Name = "buttonReg";
             buttonReg.Size = new Size(156, 35);
             buttonReg.TabIndex = 8;
@@ -181,7 +193,7 @@
             ClientSize = new Size(678, 562);
             Controls.Add(panel1);
             Name = "Regisrt";
-            Text = "Regisrt";
+            Text = "Регистрация";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
@@ -204,5 +216,6 @@
         private Label label2;
         private Panel panel2;
         private Label label1;
+        private Button button1;
     }
 }

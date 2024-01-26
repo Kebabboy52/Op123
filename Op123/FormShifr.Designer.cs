@@ -193,7 +193,7 @@
             panel2.Controls.Add(label1);
             panel2.Location = new Point(3, 3);
             panel2.Name = "panel2";
-            panel2.Size = new Size(795, 100);
+            panel2.Size = new Size(822, 100);
             panel2.TabIndex = 0;
             // 
             // label1
@@ -213,7 +213,6 @@
             ClientSize = new Size(825, 509);
             Controls.Add(panel1);
             Name = "FormShifr";
-            Text = "FormShifr";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)DiamCh).EndInit();

@@ -150,18 +150,18 @@
             panel2.Controls.Add(label1);
             panel2.Location = new Point(3, 3);
             panel2.Name = "panel2";
-            panel2.Size = new Size(814, 100);
+            panel2.Size = new Size(826, 100);
             panel2.TabIndex = 0;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("NFS font", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(149, 32);
+            label1.Location = new Point(292, 39);
             label1.Name = "label1";
-            label1.Size = new Size(360, 30);
+            label1.Size = new Size(224, 30);
             label1.TabIndex = 0;
-            label1.Text = "Зарегестрироваться";
+            label1.Text = "Авторизация";
             // 
             // Form1
             // 
@@ -170,7 +170,8 @@
             ClientSize = new Size(830, 543);
             Controls.Add(panel1);
             Name = "Form1";
-            Text = "Form1";
+            Text = "Авторизация";
+            Load += Form1_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

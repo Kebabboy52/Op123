@@ -70,7 +70,9 @@ namespace Op123
             {
                 Name = readfile.FileName;
                 IshodText.Clear();
+                   
                 IshodText.Text = File.ReadAllText(Name);
+                
             }
         }
     }

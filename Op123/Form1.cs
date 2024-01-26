@@ -28,6 +28,12 @@ namespace Op123
 
         private void buttonEnterReg_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(textBoxLog.Text) || string.IsNullOrWhiteSpace(textBoxPass.Text))
+            {
+                MessageBox.Show("Пожалуйста, заполните все поля");
+                return;
+            }
+
             DBManager dBManager = new DBManager("C:\\Users\\kizar\\DBBBB.db");
             if (dBManager.CheckUser(textBoxLog.Text, textBoxPass.Text))
             {
@@ -42,17 +48,7 @@ namespace Op123
             {
                 MessageBox.Show("Не удалось");
             }
-            //if (new User(textBoxLog.Text, textBoxPass.Text).CheckUser())
-            //{
-            //    this.Hide();
-            //    var formMain = new FormMain();
-            //    formMain.Closed += (s, args) => this.Close();
-            //    formMain.Show();
-            //}
-            //else
-            //{
-            //    this.Close();
-            //}
+          
             string login = textBoxLog.Text;
             if (login.Contains('\'') || login.Contains('-'))
             {
@@ -60,6 +56,7 @@ namespace Op123
                 MessageBox.Show("Логин содержить недопустимые символы");
                 return;
             }
+            
         }
 
         private void buttonRegSwap_Click(object sender, EventArgs e)
@@ -68,6 +65,12 @@ namespace Op123
             Regisrt reg_form = new Regisrt();
             reg_form.ShowDialog();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+        
     }
 }
 
