@@ -13,11 +13,12 @@ namespace Op123
         private char[,] _matrix;
         private int _columns;
         private int _messageLength;
-
+        public int Diameter { get; set; }
         public Scitala(int diameter)
         {
-            _matrix = new char[diameter, diameter];
-            _columns = diameter;
+            Diameter = diameter;
+            _matrix = new char[Diameter, Diameter];
+            _columns = Diameter;
             _messageLength = 0;
         }
 
@@ -38,7 +39,10 @@ namespace Op123
             int rows = (int)Math.Ceiling((double)plaintext.Length / _columns);
             _messageLength = plaintext.Length;
 
-            char[,] _matrix = new char[rows, _columns]; // Увеличиваем размеры матрицы
+            if (_matrix.GetLength(0) < rows || _matrix.GetLength(1) < _columns)
+            {
+                _matrix = new char[rows, _columns];
+            }
 
             int index = 0;
             // Заполняем матрицу символами из исходного текста

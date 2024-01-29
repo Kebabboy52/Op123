@@ -98,7 +98,7 @@ namespace Op123
             ////}
         }
 
-                                   
+
 
         private void buttonAuthSwap_Click(object sender, EventArgs e)
         {
@@ -110,6 +110,16 @@ namespace Op123
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+        
+
+        private void Regisrt_Load(object sender, EventArgs e)
+        {
+
+        }
+        private void Regisrt_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

@@ -33,6 +33,13 @@ namespace Op123
                 MessageBox.Show("Пожалуйста, заполните все поля");
                 return;
             }
+            string login = textBoxLog.Text;
+            if (login.Contains('\'') || login.Contains('-'))
+            {
+
+                MessageBox.Show("Логин содержить недопустимые символы");
+                return;
+            }
 
             DBManager dBManager = new DBManager("C:\\Users\\kizar\\DBBBB.db");
             if (dBManager.CheckUser(textBoxLog.Text, textBoxPass.Text))
@@ -49,13 +56,7 @@ namespace Op123
                 MessageBox.Show("Не удалось");
             }
           
-            string login = textBoxLog.Text;
-            if (login.Contains('\'') || login.Contains('-'))
-            {
-
-                MessageBox.Show("Логин содержить недопустимые символы");
-                return;
-            }
+            
             
         }
 
@@ -70,7 +71,11 @@ namespace Op123
         {
 
         }
-        
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
+
     }
 }
 

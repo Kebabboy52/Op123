@@ -126,6 +126,7 @@
             RazshivText.Location = new Point(475, 158);
             RazshivText.Multiline = true;
             RazshivText.Name = "RazshivText";
+            RazshivText.ScrollBars = ScrollBars.Both;
             RazshivText.Size = new Size(304, 85);
             RazshivText.TabIndex = 10;
             // 
@@ -165,6 +166,7 @@
             MainText.Location = new Point(12, 377);
             MainText.Multiline = true;
             MainText.Name = "MainText";
+            MainText.ScrollBars = ScrollBars.Both;
             MainText.Size = new Size(375, 72);
             MainText.TabIndex = 4;
             // 
@@ -173,6 +175,7 @@
             IshodText.Location = new Point(12, 158);
             IshodText.Multiline = true;
             IshodText.Name = "IshodText";
+            IshodText.ScrollBars = ScrollBars.Both;
             IshodText.Size = new Size(384, 85);
             IshodText.TabIndex = 3;
             // 

@@ -60,7 +60,9 @@ namespace Op123
 
         private void ZashCancel_Click(object sender, EventArgs e)
         {
-            Close();
+            
+                Application.Exit();
+            
         }
 
         private void buttonRead_Click(object sender, EventArgs e)
